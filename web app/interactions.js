@@ -89,10 +89,6 @@ function makeListInteractive() {
             clickEventListeners[i].bind(item_head);
         }
 
-        // for some reason the first click had to be double click
-        // but with this line of code that was fixed
-        // item_head.parentNode.children[1].style.display = "none";
-
         // remove if click handler already exists
         item_head.removeEventListener("click", clickEventListeners[i], true);
         item_head.addEventListener("click", clickEventListeners[i], true);
