@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Price Tracker",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                // "<all_urls>",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
