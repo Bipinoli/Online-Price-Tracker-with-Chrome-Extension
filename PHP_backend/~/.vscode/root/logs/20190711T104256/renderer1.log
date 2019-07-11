@@ -1,0 +1,2 @@
+[2019-07-11 10:43:39.291] [renderer1] [error] Error: [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/PHP_backend/.vscode'
+[2019-07-11 10:43:39.292] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/PHP_backend/.vscode'

@@ -1,0 +1,181 @@
+body {
+    /* border: 2px solid blue; */
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin: 0 8vw 20px 8vw;
+    padding-bottom: 50px;
+    background-color: #F5F7F9;
+    min-width: 600px;
+    max-width: 900px;
+}
+header {
+    height: 120px;
+    background-color: white;
+    box-shadow: 0 0 5px #000000af;
+    display: flex;
+    align-items: flex-end;
+}
+header .title {
+    color: #171717;
+    font-size: 1.5em;
+    margin-left: 5vw;
+    font-weight: 100;
+}
+header .title > span {
+    font-size: 2.2em;
+    font-weight: 500;
+}
+.list-view {
+    margin: 5vw;
+}
+.list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    user-select: none;
+}
+.list-top {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20px 1.2fr 80px 1fr 100px;
+    justify-items: start;
+    align-items: center;
+    color: #E16367;
+    box-shadow: 0 2px 5px #000000af;
+    z-index: 1;
+    cursor: pointer;
+}
+.list-top .color-line {
+    width: 5px;
+    height: 70px;
+    background-color: #E16367;
+    margin-left: 2px;
+}
+.list-top .item-name {
+    font-size: 1.4em;
+    padding-left: 3vw;
+}
+.list-top .item-date-time {
+    height: 100%;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.list-top .item-date {
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+}
+.list-top .item-time {
+    background-color: #F5F7F9;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+}
+.list-top .item-source-domain {
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 0 5px 0 5px;
+    font-size: 1.3em;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-top .item-current-price {
+    color: white;
+    background-color: #E16367;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+.list-details {
+    margin-left: 2px;
+    color: white;
+    background-color: #E16367;
+    box-shadow: 0 0 3px #0000006c;
+    padding: 0  0 7px 7px;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+}
+.list-details-prices {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    width: 100%;
+    margin: 0;
+    font-size: 0.9em;
+}
+.actual-desired-prices {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8px 0 8px;
+    border-bottom: 1px solid white;
+}
+.detail-price1, .detail-price2 {
+    font-weight: 100;
+}
+.desired-price-label {
+    background-color: white;
+    color: #E16367;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px #0000006c;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.list-source-and-delete-btn {
+    display: grid;
+    /* by default minumum width of columns is auto
+    which is calculated according to the content 
+    so if the content is very big it can push its 
+    sibling elements outside
+    a fix to this is to provide the minimum width of 0 */
+    grid-template-columns: minmax(0,1fr) 100px;
+    width: 100%;
+}
+.source-area {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.source-url {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    user-select: text;
+    text-align: center;
+}
+.delete-area {
+    display: flex;
+    align-items: flex-end;
+}
+.delete-btn {
+    color: #E16367;
+    background-color: white;
+    box-shadow: 0 0 3px #0000006c;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -7px;
+    cursor: pointer;
+}

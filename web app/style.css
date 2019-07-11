@@ -36,6 +36,7 @@ header .title > span {
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    user-select: none;
 }
 .list-top {
     background-color: white;
@@ -157,6 +158,7 @@ header .title > span {
 .source-url {
     max-width: 100%;
     overflow-wrap: break-word;
+    user-select: text;
 }
 .delete-area {
     display: flex;

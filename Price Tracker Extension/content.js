@@ -10,6 +10,11 @@ chrome.runtime.onMessage.addListener(
             // chrome.runtime.sendMessage({"message": "open-youtube"});
             tracePath(locatePathInDOM(select()));
         }
+        
+        // log message from background js
+        // for debugging purposes
+        if (req.message == "background-log") 
+            console.log("background.js: ", req.log);
     } 
 );
 
@@ -17,14 +22,14 @@ chrome.runtime.onMessage.addListener(
 
 
 
-
-
+let selectedValue;
 
 function select() {
     if (window.getSelection) {
         let sel = window.getSelection();
         if (sel.rangeCount > 0) {
             let element = sel.getRangeAt(0).startContainer;
+            selectedValue = element.textContent;
             return element;
         }
     }
@@ -88,9 +93,18 @@ function tracePath(path) {
         element = document.getElementsByClassName(path.ancestor_classname)[0];
     
     for (let i = 0; i<path.family_tree.length; i++) {
-        element = element.children[path.family_tree[i]];
+        element = element.children[path.family_tree[i]]; 
     }
 
     // change text to confirm things
     element.innerText = "Captured";
+
+    // console.log("selected value: " + selectedValue);
+
+
+    chrome.runtime.sendMessage({"message": "track-price", "path": path, "selectedValue": selectedValue});
 }
+
+
+
+
