@@ -6,3 +6,12 @@
 
 ## Youtube video demo
 https://www.youtube.com/watch?v=LfPPe6n694g&t=36s
+
+
+# How it works
+
+![Price Tracker system diagram](https://user-images.githubusercontent.com/11765482/69908073-3a62bf80-140a-11ea-9f7c-b5f5637a9c76.jpg)
+
+![Dynamic Dom Element creation algorithm](https://user-images.githubusercontent.com/11765482/69908074-3b93ec80-140a-11ea-8141-f21266fc6cba.jpg)
+
+![Price Tracker chrome extension](https://user-images.githubusercontent.com/11765482/69908072-3898fc00-140a-11ea-8561-682f8b62ebc1.jpg)
